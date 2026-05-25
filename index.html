@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+  <h1 id="templeTitle">🛕 Baba Kalondiroy Shiv Temple</h1>
+  <p>Official Temple Website</p>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search temple...">
+    <button onclick="searchTemple()">Search</button>
+  </div>
+</header>
+
+<section id="templeContent" class="hidden">
+
+  <div class="card">
+    <img id="templeImage" src="https://images.unsplash.com/photo-1626621341515-bbf8a96e494b?q=80&w=1200" alt="Temple">
+  </div>
+
+  <div class="card">
+    <h2>📜 Temple History</h2>
+    <p id="historyText">
+      Baba Kalondiroy Shiv Temple is one of the sacred temples of West Bengal.
+      Maha Shivratri and Gajan festivals are celebrated here every year.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Location</h2>
+    <a id="mapLink" href="https://maps.app.goo.gl/KMwvLJ4U3DP8rWuV7" target="_blank">
+      Open Google Map
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>🎭 Festivals</h2>
+    <p id="festivalText">
+      Maha Shivratri, Gajan Festival, Monday Special Puja
+    </p>
+  </div>
+
+  <div class="card social-links">
+    <a id="facebookLink" href="#" target="_blank">Facebook Page</a>
+    <a id="youtubeLink" href="#" target="_blank">YouTube Channel</a>
+  </div>
+
+</section>
+
+<section class="admin-panel">
+  <h2>🔒 Admin Panel</h2>
+
+  <input type="password" id="adminPassword" placeholder="Enter Password">
+
+  <input type="text" id="newTitle" placeholder="Temple Name">
+
+  <input type="text" id="newImage" placeholder="Image URL">
+
+  <textarea id="newHistory" placeholder="Temple History"></textarea>
+
+  <textarea id="newFestival" placeholder="Festival Details"></textarea>
+
+  <input type="text" id="newMap" placeholder="Google Map Link">
+
+  <input type="text" id="newFacebook" placeholder="Facebook Link">
+
+  <input type="text" id="newYoutube" placeholder="YouTube Link">
+
+  <button onclick="updateTemple()">Save Changes</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
