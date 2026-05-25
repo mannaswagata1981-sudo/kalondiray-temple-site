@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +13,15 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
+font-family: 'Segoe UI', Arial, 'Noto Sans Bengali', sans-serif;
 background:#f8f5ef;
 color:#222;
 }
 
+/* Hero Background Styled with Google Maps Street view vibe */
 .hero{
-height:100vh;
-background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url('https://images.unsplash.com/photo-1609137144813-094119d67571?q=80&w=1200');
+height:75vh;
+background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1920');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -29,49 +30,28 @@ justify-content:center;
 text-align:center;
 padding:20px;
 color:white;
+border-b: 5px solid #8b5e00;
 }
 
 .hero-content h1{
-font-size:55px;
+font-size:48px;
 margin-bottom:15px;
+text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .hero-content p{
-font-size:20px;
-margin-bottom:30px;
-}
-
-.search-box{
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
-}
-
-.search-box input{
-padding:15px;
-width:280px;
-border:none;
-border-radius:10px;
-font-size:16px;
-color: #000;
-}
-
-.search-box button{
-padding:15px 25px;
-border:none;
-background:#ff9800;
-color:white;
-font-weight:bold;
-border-radius:10px;
-cursor:pointer;
+font-size:22px;
+margin-bottom:10px;
+color: #ffb74d;
+font-weight: bold;
+text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
 .container{
 width:92%;
 max-width:1200px;
 margin:auto;
-padding:50px 0;
+padding:40px 0;
 }
 
 .card{
@@ -85,14 +65,45 @@ box-shadow:0 4px 15px rgba(0,0,0,.08);
 .card h2{
 margin-bottom:15px;
 color:#8b5e00;
+font-size: 24px;
+border-bottom: 2px solid #f0e6d2;
+padding-bottom: 8px;
 }
 
 .main-photo{
 width:100%;
 border-radius:15px;
-max-height:550px;
+max-height:500px;
 object-fit:cover;
 }
+
+/* Social Media Channels Embedded Box */
+.social-box {
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+margin-top: 15px;
+}
+
+.social-btn {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+padding: 12px 20px;
+color: white;
+text-decoration: none;
+border-radius: 10px;
+font-weight: bold;
+transition: 0.2s;
+font-size: 15px;
+}
+
+.btn-fb { background: #1877F2; }
+.btn-fb:hover { background: #145db2; }
+.btn-yt { background: #FF0000; }
+.btn-yt:hover { background: #cc0000; }
+.btn-map { background: #4CAF50; }
+.btn-map:hover { background: #388E3C; }
 
 .gallery{
 display:grid;
@@ -114,23 +125,9 @@ cursor:pointer;
 transform:scale(1.03);
 }
 
-.map-btn{
-display:inline-block;
-margin-top:15px;
-padding:14px 20px;
-background:#ff9800;
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
-}
-
-.hidden{
-display:none;
-}
-
 .festival-list{
 line-height:1.8;
+font-size: 16px;
 }
 
 footer{
@@ -232,41 +229,34 @@ border: 1px dashed #8b5e00;
 }
 
 @media(max-width:768px){
-.hero-content h1{
-font-size:35px;
-}
-.hero{
-height:auto;
-padding:100px 20px;
-}
+.hero-content h1{ font-size:32px; }
+.hero-content p{ font-size:18px; }
+.hero{ height:60vh; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO SECTION (NO SEARCH BOX - DIRECT LOAD) -->
 <section class="hero">
 <div class="hero-content">
 <h1 id="templeTitle">🛕 Baba Kalondiroy Shiv Temple</h1>
-<p>নৈহাটী শিবতলা Festivals • Heritage • Devotion</p>
-<div class="search-box">
-<input type="text" id="searchInput" placeholder="Search Kalondiroy Temple...">
-<button onclick="searchTemple()">Search</button>
-</div>
+<p>নৈহাটী ভূঁইআড়া শিবতলা • Daspur</p>
+<p style="font-size:16px; color:#fff; font-weight:normal;">Festivals • Heritage • Devotion</p>
 </div>
 </section>
 
 <!-- MAIN CONTENT SECTION -->
 <div class="container">
-<section id="templeContent" class="hidden">
+<section id="templeContent">
 <div class="card">
 <img id="mainPhoto" class="main-photo" src="https://images.unsplash.com/photo-1626621341515-bbf8a96e494b?q=80&w=1200">
 </div>
 
 <div class="card">
-<h2>📜 Temple History</h2>
-<p id="historyText" style="text-align: justify; line-height: 1.8;">
+<h2>📜 Temple History / মন্দিরের ইতিহাস</h2>
+<p id="historyText" style="text-align: justify; line-height: 1.8; font-size: 16px;">
 The sacred legacy of Baba Kalondiroy Shiv Temple spans well over a century, standing as an eternal testament to divine miracles, rich cultural heritage, and the absolute devotion of the local community. Unlike modern temples, the spiritual core of this shrine holds a magnificent Swayambhu Lingam—a self-manifested deity that emerged naturally from the deep womb of the earth. Local generations firmly believe that this sacred stone is a direct, divine portal originating from the mystical realm of Patal Lok, pushing its way into the mortal world to bless and protect humanity.<br><br>
 According to ancient lore passed down by village elders, this heavenly presence was first discovered hidden beneath the rustic shade of a sacred Choi tree. In those early days, it was nothing more than a humble, small clearing where devotees gathered to offer simple prayers. As the divine fame of Baba Kalondiroy spread, the community united to construct a permanent home for the deity. This first historic structure was built using the ancient architectural methods of Bengal—crafted entirely out of traditional Chun-Surki (lime and brick mortar). To honor the Lord, ancient artisans spent years carving intricate, hand-made terracotta motifs and murtis onto its walls, alongside majestic creations of traditional animals like tigers and lions, showcasing a rich era of regional art.<br><br>
 However, as the decades rolled by, the antique structure suffered severe structural decay due to the harsh elements of time, eventually becoming dilapidated and distressed. Seeing their beloved shrine in danger, the residents of two neighboring villages—Naihati and Bhuniarah—came together as a single family. Bound by their shared duty as the rightful custodians of Baba Kalondiroy, the people executed a massive, historic renovation project approximately 30 years ago, breathing new life into the weakening walls and preserving the sacred compound for their children.<br><br>
@@ -274,26 +264,36 @@ Today, history is turning its most magnificent page yet. Driven by a shared divi
 </p>
 </div>
 
+<!-- INTEGRATED SOCIAL LINKS BOX -->
 <div class="card">
-<h2>📍 Temple Address</h2>
-<p id="addressText">
-Village: Naihati<br>
-Post: Arit<br>
-District: Paschim Medinipur<br>
-PIN: 721148
-</p>
-<a id="mapLink" class="map-btn" href="https://maps.app.goo.gl/KMwvLJ4U3DP8rWuV7" target="_blank">Open Google Map</a>
+<h2>🌐 Official Social Media & Location Links</h2>
+<p style="margin-bottom: 15px; color:#555;">মন্দিরের অফিসিয়াল ফেসবুক, ইউটিউব চ্যানেল এবং গুগল ম্যাপস এর লিংক নিচে দেওয়া হলো:</p>
+<div class="social-box">
+<a id="fbLink" class="social-btn btn-fb" href="https://www.facebook.com" target="_blank">👥 Facebook Page</a>
+<a id="ytLink" class="social-btn btn-yt" href="https://www.youtube.com" target="_blank">📺 YouTube Channel</a>
+<a id="mapLink" class="social-btn btn-map" href="https://maps.app.goo.gl/KMwvLJ4U3DP8rWuV7" target="_blank">📍 Google Maps Location</a>
+</div>
 </div>
 
 <div class="card">
-<h2>🎭 Festivals & Programs</h2>
+<h2>📍 Temple Address / মন্দিরের ঠিকানা</h2>
+<p id="addressText" style="font-size: 16px; line-height: 1.8;">
+<b>Village:</b> Naihati (নৈহাটী)<br>
+<b>Post:</b> Arit (অরিৎ)<br>
+<b>District:</b> Paschim Medinipur (পশ্চিম মেদিনীপুর)<br>
+<b>PIN:</b> 721148
+</p>
+</div>
+
+<div class="card">
+<h2>🎭 Festivals & Programs / উৎসব ও অনুষ্ঠান</h2>
 <div id="festivalText" class="festival-list">
 Baba Kalondiroy Temple comes alive during major festivals like Maha Shivratri, the annual Gajan festival and mela, and the holy month of Shravan, which draws thousands of devotees to pour sacred water on the Swayambhu.
 </div>
 </div>
 
 <div class="card">
-<h2>🖼️ Temple Gallery</h2>
+<h2>🖼️ Temple Gallery / গ্যালারি</h2>
 <div class="gallery">
 <img id="galleryPhoto1" src="https://images.unsplash.com/photo-1626621341515-bbf8a96e494b?q=80&w=1200">
 <img src="https://images.unsplash.com/photo-1609137144813-094119d67571?q=80&w=1200">
@@ -310,7 +310,7 @@ Baba Kalondiroy Temple comes alive during major festivals like Maha Shivratri, t
 <!-- PASSWORD ONLY LOGIN POPUP -->
 <div class="login-popup" id="loginPopup">
 <h2>Admin Login</h2>
-<input type="password" id="password" placeholder="Enter Admin Password">
+<input type="password" id="password" placeholder="Enter Password">
 <button onclick="loginAdmin()">Login</button>
 <button class="close-btn" onclick="closeLogin()" style="padding:8px; font-size:12px;">Cancel</button>
 </div>
@@ -321,7 +321,7 @@ Baba Kalondiroy Temple comes alive during major festivals like Maha Shivratri, t
 <hr><br>
 
 <label><b>Update Temple Title:</b></label>
-<input type="text" id="newTitle" placeholder="Temple Name">
+<input type="text" id="newTitle">
 
 <label><b>Upload New Main Photo:</b></label>
 <label class="file-input-label">
@@ -331,10 +331,16 @@ Baba Kalondiroy Temple comes alive during major festivals like Maha Shivratri, t
 <span id="fileNameDisplay" style="font-size:12px; color:green; display:block; margin-bottom:10px;"></span>
 
 <label><b>Update History/Story Text:</b></label>
-<textarea id="newHistory" rows="6" placeholder="Temple History Story"></textarea>
+<textarea id="newHistory" rows="6"></textarea>
 
 <label><b>Update Festivals Line:</b></label>
-<textarea id="newFestival" rows="4" placeholder="Festival details..."></textarea>
+<textarea id="newFestival" rows="4"></textarea>
+
+<label><b>Update Facebook Link:</b></label>
+<input type="text" id="newFb" placeholder="Facebook URL">
+
+<label><b>Update YouTube Link:</b></label>
+<input type="text" id="newYt" placeholder="YouTube URL">
 
 <label><b>Update Google Map Link:</b></label>
 <input type="text" id="newMap" placeholder="Google Map URL">
@@ -351,21 +357,6 @@ Baba Kalondiroy Temple comes alive during major festivals like Maha Shivratri, t
 const adminPass = "2024asd";
 let uploadedImageBase64 = "";
 
-// Simple Text Search Engine
-function searchTemple(){
-    const query = document.getElementById("searchInput").value.toLowerCase().trim();
-    
-    if(query.includes("kalondiroy") || query.includes("shiv") || query.includes("naihati") || query.includes("baba")){
-        document.getElementById("templeContent").classList.remove("hidden");
-        window.scrollTo({
-            top: 650,
-            behavior: 'smooth'
-        });
-    } else {
-        alert("Temple Profile Not Found. Try typing 'Kalondiroy'!");
-    }
-}
-
 function openLogin(){
     document.getElementById("loginPopup").style.display = "block";
 }
@@ -374,17 +365,19 @@ function closeLogin(){
     document.getElementById("loginPopup").style.display = "none";
 }
 
-// Password Only Login Handler
+// Password Only Verification
 function loginAdmin(){
     const pass = document.getElementById("password").value;
     if(pass === adminPass){
         document.getElementById("loginPopup").style.display = "none";
         document.getElementById("adminPanel").style.display = "block";
         
-        // Pre-fill fields with existing text
+        // Pre-fill existing data
         document.getElementById("newTitle").value = document.getElementById("templeTitle").innerText;
         document.getElementById("newHistory").value = document.getElementById("historyText").innerText;
         document.getElementById("newFestival").value = document.getElementById("festivalText").innerText;
+        document.getElementById("newFb").value = document.getElementById("fbLink").href;
+        document.getElementById("newYt").value = document.getElementById("ytLink").href;
         document.getElementById("newMap").value = document.getElementById("mapLink").href;
         
         alert("Admin Authorized Successfully!");
@@ -398,7 +391,7 @@ function closeAdmin(){
     document.getElementById("password").value = "";
 }
 
-// Local File Upload Image Processor Layer
+// Image File Upload Logic
 document.getElementById('fileUpload').addEventListener('change', function(e) {
     const file = e.target.files[0];
     if (file) {
@@ -411,7 +404,6 @@ document.getElementById('fileUpload').addEventListener('change', function(e) {
     }
 });
 
-// Update content on live page setup
 function updateTemple(){
     if(document.getElementById("newTitle").value.trim() !== ""){
         document.getElementById("templeTitle").innerText = document.getElementById("newTitle").value;
@@ -422,21 +414,24 @@ function updateTemple(){
     if(document.getElementById("newFestival").value.trim() !== ""){
         document.getElementById("festivalText").innerHTML = document.getElementById("newFestival").value;
     }
+    if(document.getElementById("newFb").value.trim() !== ""){
+        document.getElementById("fbLink").href = document.getElementById("newFb").value;
+    }
+    if(document.getElementById("newYt").value.trim() !== ""){
+        document.getElementById("ytLink").href = document.getElementById("newYt").value;
+    }
     if(document.getElementById("newMap").value.trim() !== ""){
         document.getElementById("mapLink").href = document.getElementById("newMap").value;
     }
     
-    // Direct Image upload mapping hook
+    // Live update uploaded image
     if(uploadedImageBase64 !== ""){
         document.getElementById("mainPhoto").src = uploadedImageBase64;
         document.getElementById("galleryPhoto1").src = uploadedImageBase64;
     }
     
-    alert("Changes committed successfully to current session view!");
+    alert("Changes committed successfully!");
     closeAdmin();
-    
-    // Auto refresh search results to show new content
-    document.getElementById("templeContent").classList.remove("hidden");
 }
 </script>
 </body>
