@@ -1,70 +1,415 @@
 <!DOCTYPE html>
-  <h1 id="templeTitle">🛕 Baba Kalondiroy Shiv Temple</h1>
-  <p>Official Temple Website</p>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search temple...">
-    <button onclick="searchTemple()">Search</button>
-  </div>
+<title>Baba Kalondiroy Shiv Temple</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#fef7e8;
+color:#333;
+}
+
+.hero{
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1609137144813-094119d67571?q=80&w=1200');
+background-size:cover;
+background-position:center;
+padding:90px 20px;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+opacity:.9;
+}
+
+.search-box{
+margin-top:30px;
+}
+
+.search-box input{
+width:260px;
+padding:14px;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+
+.search-box button{
+padding:14px 22px;
+background:#ff9800;
+border:none;
+color:white;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+}
+
+.container{
+width:90%;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:white;
+margin:25px 0;
+padding:25px;
+border-radius:15px;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+border-radius:12px;
+}
+
+.card h2{
+margin-bottom:15px;
+color:#8b5e00;
+}
+
+.map-btn{
+display:inline-block;
+padding:12px 18px;
+background:#ff9800;
+color:white;
+text-decoration:none;
+border-radius:8px;
+margin-top:10px;
+}
+
+.social-links{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.social-links a{
+padding:12px 16px;
+background:#8b5e00;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+.admin-panel{
+background:white;
+padding:25px;
+margin:40px auto;
+border-radius:15px;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.admin-panel h2{
+margin-bottom:20px;
+}
+
+.admin-panel input,
+.admin-panel textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.admin-panel button{
+background:#8b5e00;
+color:white;
+padding:14px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+.hidden{
+display:none;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+
+<h1 id="templeTitle">🛕 Baba Kalondiroy Shiv Temple</h1>
+
+<p>Official Temple Heritage & Cultural Website</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Kalondiroy Temple">
+
+<button onclick="searchTemple()">
+Search
+</button>
+
+</div>
+
 </header>
+
+<div class="container">
 
 <section id="templeContent" class="hidden">
 
-  <div class="card">
-    <img id="templeImage" src="https://images.unsplash.com/photo-1626621341515-bbf8a96e494b?q=80&w=1200" alt="Temple">
-  </div>
+<div class="card">
 
-  <div class="card">
-    <h2>📜 Temple History</h2>
-    <p id="historyText">
-      Baba Kalondiroy Shiv Temple is one of the sacred temples of West Bengal.
-      Maha Shivratri and Gajan festivals are celebrated here every year.
-    </p>
-  </div>
+<img
+id="templeImage"
+src="https://images.unsplash.com/photo-1626621341515-bbf8a96e494b?q=80&w=1200"
+alt="Temple Photo">
 
-  <div class="card">
-    <h2>📍 Location</h2>
-    <a id="mapLink" href="https://maps.app.goo.gl/KMwvLJ4U3DP8rWuV7" target="_blank">
-      Open Google Map
-    </a>
-  </div>
+</div>
 
-  <div class="card">
-    <h2>🎭 Festivals</h2>
-    <p id="festivalText">
-      Maha Shivratri, Gajan Festival, Monday Special Puja
-    </p>
-  </div>
+<div class="card">
 
-  <div class="card social-links">
-    <a id="facebookLink" href="#" target="_blank">Facebook Page</a>
-    <a id="youtubeLink" href="#" target="_blank">YouTube Channel</a>
-  </div>
+<h2>📜 Temple History</h2>
+
+<p id="historyText">
+
+Baba Kalondiroy Shiv Temple is a sacred spiritual place located in Naihati village of Paschim Medinipur, West Bengal.
+
+The temple is deeply connected with local Hindu culture, Shiva devotion, Gajan traditions, and Maha Shivratri celebrations.
+
+Devotees from nearby villages gather here during annual festivals and special puja ceremonies.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>📍 Temple Location</h2>
+
+<p>
+
+Village: Naihati<br>
+Post: Arit<br>
+District: Paschim Medinipur<br>
+PIN: 721148
+
+</p>
+
+<a
+id="mapLink"
+class="map-btn"
+href="https://maps.app.goo.gl/KMwvLJ4U3DP8rWuV7"
+target="_blank">
+
+Open Google Map
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>🎭 Festival & Programs</h2>
+
+<p id="festivalText">
+
+• Maha Shivratri Festival<br>
+• Gajan Cultural Program<br>
+• Monday Shiva Puja<br>
+• Village Religious Gatherings
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>📺 Social Media</h2>
+
+<div class="social-links">
+
+<a
+id="facebookLink"
+href="#"
+target="_blank">
+
+Facebook Page
+
+</a>
+
+<a
+id="youtubeLink"
+href="#"
+target="_blank">
+
+YouTube Channel
+
+</a>
+
+</div>
+
+</div>
 
 </section>
 
 <section class="admin-panel">
-  <h2>🔒 Admin Panel</h2>
 
-  <input type="password" id="adminPassword" placeholder="Enter Password">
+<h2>🔒 Temple Admin Update Panel</h2>
 
-  <input type="text" id="newTitle" placeholder="Temple Name">
+<p style="margin-bottom:15px;">
+Only authorized person can update temple information.
+</p>
 
-  <input type="text" id="newImage" placeholder="Image URL">
+<input
+type="password"
+id="adminPassword"
+placeholder="Enter Admin Password">
 
-  <textarea id="newHistory" placeholder="Temple History"></textarea>
+<input
+type="text"
+id="newTitle"
+placeholder="Temple Name">
 
-  <textarea id="newFestival" placeholder="Festival Details"></textarea>
+<input
+type="text"
+id="newImage"
+placeholder="Temple Photo URL">
 
-  <input type="text" id="newMap" placeholder="Google Map Link">
+<textarea
+id="newHistory"
+rows="5"
+placeholder="Temple Story / History"></textarea>
 
-  <input type="text" id="newFacebook" placeholder="Facebook Link">
+<textarea
+id="newFestival"
+rows="4"
+placeholder="Festival & Program Details"></textarea>
 
-  <input type="text" id="newYoutube" placeholder="YouTube Link">
+<input
+type="text"
+id="newMap"
+placeholder="Google Map Link">
 
-  <button onclick="updateTemple()">Save Changes</button>
+<input
+type="text"
+id="newFacebook"
+placeholder="Facebook Page Link">
+
+<input
+type="text"
+id="newYoutube"
+placeholder="YouTube Channel Link">
+
+<button onclick="updateTemple()">
+Save Temple Updates
+</button>
+
 </section>
 
-<script src="script.js"></script>
+</div>
+
+<footer>
+
+© 2026 Baba Kalondiroy Shiv Temple
+
+</footer>
+
+<script>
+
+const password = "2024asd";
+
+function searchTemple(){
+
+const query =
+document.getElementById("searchInput")
+.value
+.toLowerCase();
+
+if(
+query.includes("kalondiroy") ||
+query.includes("shiv") ||
+query.includes("baba") ||
+query.includes("naihati")
+){
+
+document
+.getElementById("templeContent")
+.classList
+.remove("hidden");
+
+}else{
+
+alert("Temple Not Found");
+
+}
+
+}
+
+function updateTemple(){
+
+const pass =
+document.getElementById("adminPassword").value;
+
+if(pass !== password){
+
+alert("Wrong Password");
+return;
+
+}
+
+document.getElementById("templeTitle").innerText =
+document.getElementById("newTitle").value;
+
+document.getElementById("templeImage").src =
+document.getElementById("newImage").value;
+
+document.getElementById("historyText").innerHTML =
+document.getElementById("newHistory").value;
+
+document.getElementById("festivalText").innerHTML =
+document.getElementById("newFestival").value;
+
+document.getElementById("mapLink").href =
+document.getElementById("newMap").value;
+
+document.getElementById("facebookLink").href =
+document.getElementById("newFacebook").value;
+
+document.getElementById("youtubeLink").href =
+document.getElementById("newYoutube").value;
+
+alert("Temple Updated Successfully");
+
+}
+
+</script>
+
 </body>
 </html>
