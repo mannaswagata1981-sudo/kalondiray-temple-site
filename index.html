@@ -3,11 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Baba Kalondiroy Shiv Temple</title>
-
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -23,10 +20,7 @@ color:#222;
 
 .hero{
 height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url('images/photo1.jpg');
-
+background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url('https://images.unsplash.com/photo-1609137144813-094119d67571?q=80&w=1200');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -60,6 +54,7 @@ width:280px;
 border:none;
 border-radius:10px;
 font-size:16px;
+color: #000;
 }
 
 .search-box button{
@@ -135,7 +130,7 @@ display:none;
 }
 
 .festival-list{
-line-height:2;
+line-height:1.8;
 }
 
 footer{
@@ -224,341 +219,225 @@ background:red !important;
 margin-top:10px;
 }
 
-@media(max-width:768px){
+.file-input-label {
+display: block;
+padding: 10px;
+background: #eee;
+text-align: center;
+border-radius: 10px;
+cursor: pointer;
+margin: 10px 0;
+font-weight: bold;
+border: 1px dashed #8b5e00;
+}
 
+@media(max-width:768px){
 .hero-content h1{
 font-size:35px;
 }
-
 .hero{
 height:auto;
 padding:100px 20px;
 }
-
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-
+<!-- HERO SECTION -->
 <section class="hero">
-
 <div class="hero-content">
-
-<h1 id="templeTitle">
-🛕 Baba Kalondiroy Shiv Temple
-</h1>
-
-<p>
-নৈহাটী শিবতলা Festivals • Heritage • Devotion
-</p>
-
+<h1 id="templeTitle">🛕 Baba Kalondiroy Shiv Temple</h1>
+<p>নৈহাটী শিবতলা Festivals • Heritage • Devotion</p>
 <div class="search-box">
-
-<input
-type="text"
-id="searchInput"
-placeholder="Search Kalondiroy Temple">
-
-<button onclick="searchTemple()">
-Search
-</button>
-
+<input type="text" id="searchInput" placeholder="Search Kalondiroy Temple...">
+<button onclick="searchTemple()">Search</button>
 </div>
-
 </div>
-
 </section>
 
-<!-- MAIN CONTENT -->
-
+<!-- MAIN CONTENT SECTION -->
 <div class="container">
-
 <section id="templeContent" class="hidden">
-
 <div class="card">
-
-<img
-id="mainPhoto"
-class="main-photo"
-src="images/photo1.jpg">
-
+<img id="mainPhoto" class="main-photo" src="https://images.unsplash.com/photo-1626621341515-bbf8a96e494b?q=80&w=1200">
 </div>
 
 <div class="card">
-
 <h2>📜 Temple History</h2>
-
-<p id="historyText">
-
-Baba Kalondiroy Shiv Temple is one of the spiritual heritage temples located in Naihati village, Paschim Medinipur, West Bengal.
-
-The temple is deeply connected with Shiva devotion, local Gajan culture, Maha Shivratri celebrations, and traditional village religious gatherings.
-
-The ancient temple structure represents the cultural identity and devotional unity of the surrounding region.
-
+<p id="historyText" style="text-align: justify; line-height: 1.8;">
+The sacred legacy of Baba Kalondiroy Shiv Temple spans well over a century, standing as an eternal testament to divine miracles, rich cultural heritage, and the absolute devotion of the local community. Unlike modern temples, the spiritual core of this shrine holds a magnificent Swayambhu Lingam—a self-manifested deity that emerged naturally from the deep womb of the earth. Local generations firmly believe that this sacred stone is a direct, divine portal originating from the mystical realm of Patal Lok, pushing its way into the mortal world to bless and protect humanity.<br><br>
+According to ancient lore passed down by village elders, this heavenly presence was first discovered hidden beneath the rustic shade of a sacred Choi tree. In those early days, it was nothing more than a humble, small clearing where devotees gathered to offer simple prayers. As the divine fame of Baba Kalondiroy spread, the community united to construct a permanent home for the deity. This first historic structure was built using the ancient architectural methods of Bengal—crafted entirely out of traditional Chun-Surki (lime and brick mortar). To honor the Lord, ancient artisans spent years carving intricate, hand-made terracotta motifs and murtis onto its walls, alongside majestic creations of traditional animals like tigers and lions, showcasing a rich era of regional art.<br><br>
+However, as the decades rolled by, the antique structure suffered severe structural decay due to the harsh elements of time, eventually becoming dilapidated and distressed. Seeing their beloved shrine in danger, the residents of two neighboring villages—Naihati and Bhuniarah—came together as a single family. Bound by their shared duty as the rightful custodians of Baba Kalondiroy, the people executed a massive, historic renovation project approximately 30 years ago, breathing new life into the weakening walls and preserving the sacred compound for their children.<br><br>
+Today, history is turning its most magnificent page yet. Driven by a shared divine inspiration and the collective command of the people, the united communities of Naihati and Bhuniarah have taken a monumental resolution. Recognizing that the old structure can no longer accommodate the thousands of pilgrims who gather here, they have decided to reconstruct the entire shrine from its very foundations. This ambitious modern project is currently underway to build a breathtaking, sky-piercing architectural marvel. Once completed, this monumental crown jewel will proudly stand as the grandest and biggest Shiv Temple in the entire Daspur region, carrying the glorious name of Baba Kalondiroy into the next century.
 </p>
-
 </div>
 
 <div class="card">
-
 <h2>📍 Temple Address</h2>
-
-<p>
-
+<p id="addressText">
 Village: Naihati<br>
 Post: Arit<br>
 District: Paschim Medinipur<br>
 PIN: 721148
-
 </p>
-
-<a
-id="mapLink"
-class="map-btn"
-href="https://maps.app.goo.gl/KMwvLJ4U3DP8rWuV7"
-target="_blank">
-
-Open Google Map
-
-</a>
-
+<a id="mapLink" class="map-btn" href="https://maps.app.goo.gl/KMwvLJ4U3DP8rWuV7" target="_blank">Open Google Map</a>
 </div>
 
 <div class="card">
-
 <h2>🎭 Festivals & Programs</h2>
-
-<div
-id="festivalText"
-class="festival-list">
-
-• Maha Shivratri Festival<br>
-• Gajan Festival<br>
-• Shiva Puja<br>
-• Religious Cultural Programs<br>
-• Annual Temple Celebration
-
+<div id="festivalText" class="festival-list">
+Baba Kalondiroy Temple comes alive during major festivals like Maha Shivratri, the annual Gajan festival and mela, and the holy month of Shravan, which draws thousands of devotees to pour sacred water on the Swayambhu.
 </div>
-
 </div>
 
 <div class="card">
-
 <h2>🖼️ Temple Gallery</h2>
-
 <div class="gallery">
-
-<img src="images/photo1.jpg">
-<img src="images/photo2.jpg">
-<img src="images/photo3.jpg">
-<img src="images/photo4.jpg">
-
+<img id="galleryPhoto1" src="https://images.unsplash.com/photo-1626621341515-bbf8a96e494b?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1609137144813-094119d67571?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1545128485-c400e7702796?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1561361531-9952a7879303?q=80&w=1200">
 </div>
-
 </div>
-
 </section>
-
 </div>
 
-<!-- ADMIN ICON -->
+<!-- FIXED ADMIN GEAR ICON -->
+<div class="admin-icon" onclick="openLogin()">⚙️</div>
 
-<div
-class="admin-icon"
-onclick="openLogin()">
-
-⚙️
-
-</div>
-
-<!-- LOGIN POPUP -->
-
-<div
-class="login-popup"
-id="loginPopup">
-
+<!-- PASSWORD ONLY LOGIN POPUP -->
+<div class="login-popup" id="loginPopup">
 <h2>Admin Login</h2>
-
-<input
-type="text"
-id="username"
-placeholder="Username">
-
-<input
-type="password"
-id="password"
-placeholder="Password">
-
-<button onclick="loginAdmin()">
-Login
-</button>
-
+<input type="password" id="password" placeholder="Enter Admin Password">
+<button onclick="loginAdmin()">Login</button>
+<button class="close-btn" onclick="closeLogin()" style="padding:8px; font-size:12px;">Cancel</button>
 </div>
 
-<!-- ADMIN PANEL -->
-
-<div
-class="admin-panel"
-id="adminPanel">
-
+<!-- ADMIN CONTROL PANEL -->
+<div class="admin-panel" id="adminPanel">
 <h2>Temple Update Panel</h2>
+<hr><br>
 
-<input
-type="text"
-id="newTitle"
-placeholder="Temple Name">
+<label><b>Update Temple Title:</b></label>
+<input type="text" id="newTitle" placeholder="Temple Name">
 
-<input
-type="text"
-id="newMainPhoto"
-placeholder="Main Photo Path">
+<label><b>Upload New Main Photo:</b></label>
+<label class="file-input-label">
+📁 Choose Image File
+<input type="file" id="fileUpload" accept="image/*" style="display:none;">
+</label>
+<span id="fileNameDisplay" style="font-size:12px; color:green; display:block; margin-bottom:10px;"></span>
 
-<textarea
-id="newHistory"
-rows="5"
-placeholder="Temple History"></textarea>
+<label><b>Update History/Story Text:</b></label>
+<textarea id="newHistory" rows="6" placeholder="Temple History Story"></textarea>
 
-<textarea
-id="newFestival"
-rows="5"
-placeholder="Festival Details"></textarea>
+<label><b>Update Festivals Line:</b></label>
+<textarea id="newFestival" rows="4" placeholder="Festival details..."></textarea>
 
-<input
-type="text"
-id="newMap"
-placeholder="Google Map Link">
+<label><b>Update Google Map Link:</b></label>
+<input type="text" id="newMap" placeholder="Google Map URL">
 
-<button onclick="updateTemple()">
-Save Changes
-</button>
-
-<button
-class="close-btn"
-onclick="closeAdmin()">
-
-Close
-
-</button>
-
+<button onclick="updateTemple()">Save & Apply Changes</button>
+<button class="close-btn" onclick="closeAdmin()">Close</button>
 </div>
 
 <footer>
-
 © 2026 Baba Kalondiroy Shiv Temple | Naihati Shivtala
-
 </footer>
 
 <script>
-
-const adminUser = "KALONDIRAY";
 const adminPass = "2024asd";
+let uploadedImageBase64 = "";
 
+// Simple Text Search Engine
 function searchTemple(){
-
-const query =
-document.getElementById("searchInput")
-.value
-.toLowerCase();
-
-if(
-query.includes("kalondiroy") ||
-query.includes("shiv") ||
-query.includes("naihati") ||
-query.includes("baba")
-){
-
-document
-.getElementById("templeContent")
-.classList
-.remove("hidden");
-
-window.scrollTo({
-top:700,
-behavior:'smooth'
-});
-
-}else{
-
-alert("Temple Not Found");
-
-}
-
+    const query = document.getElementById("searchInput").value.toLowerCase().trim();
+    
+    if(query.includes("kalondiroy") || query.includes("shiv") || query.includes("naihati") || query.includes("baba")){
+        document.getElementById("templeContent").classList.remove("hidden");
+        window.scrollTo({
+            top: 650,
+            behavior: 'smooth'
+        });
+    } else {
+        alert("Temple Profile Not Found. Try typing 'Kalondiroy'!");
+    }
 }
 
 function openLogin(){
-
-document
-.getElementById("loginPopup")
-.style.display = "block";
-
+    document.getElementById("loginPopup").style.display = "block";
 }
 
+function closeLogin(){
+    document.getElementById("loginPopup").style.display = "none";
+}
+
+// Password Only Login Handler
 function loginAdmin(){
-
-const user =
-document.getElementById("username").value;
-
-const pass =
-document.getElementById("password").value;
-
-if(
-user === adminUser &&
-pass === adminPass
-){
-
-document
-.getElementById("loginPopup")
-.style.display = "none";
-
-document
-.getElementById("adminPanel")
-.style.display = "block";
-
-alert("Admin Login Success");
-
-}else{
-
-alert("Wrong Username or Password");
-
-}
-
+    const pass = document.getElementById("password").value;
+    if(pass === adminPass){
+        document.getElementById("loginPopup").style.display = "none";
+        document.getElementById("adminPanel").style.display = "block";
+        
+        // Pre-fill fields with existing text
+        document.getElementById("newTitle").value = document.getElementById("templeTitle").innerText;
+        document.getElementById("newHistory").value = document.getElementById("historyText").innerText;
+        document.getElementById("newFestival").value = document.getElementById("festivalText").innerText;
+        document.getElementById("newMap").value = document.getElementById("mapLink").href;
+        
+        alert("Admin Authorized Successfully!");
+    } else {
+        alert("Incorrect Access Password!");
+    }
 }
 
 function closeAdmin(){
-
-document
-.getElementById("adminPanel")
-.style.display = "none";
-
+    document.getElementById("adminPanel").style.display = "none";
+    document.getElementById("password").value = "";
 }
 
+// Local File Upload Image Processor Layer
+document.getElementById('fileUpload').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+        document.getElementById('fileNameDisplay').innerText = "Selected: " + file.name;
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            uploadedImageBase64 = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+// Update content on live page setup
 function updateTemple(){
-
-document.getElementById("templeTitle").innerText =
-document.getElementById("newTitle").value;
-
-document.getElementById("mainPhoto").src =
-document.getElementById("newMainPhoto").value;
-
-document.getElementById("historyText").innerHTML =
-document.getElementById("newHistory").value;
-
-document.getElementById("festivalText").innerHTML =
-document.getElementById("newFestival").value;
-
-document.getElementById("mapLink").href =
-document.getElementById("newMap").value;
-
-alert("Temple Updated Successfully");
-
+    if(document.getElementById("newTitle").value.trim() !== ""){
+        document.getElementById("templeTitle").innerText = document.getElementById("newTitle").value;
+    }
+    if(document.getElementById("newHistory").value.trim() !== ""){
+        document.getElementById("historyText").innerHTML = document.getElementById("newHistory").value.replace(/\n/g, "<br>");
+    }
+    if(document.getElementById("newFestival").value.trim() !== ""){
+        document.getElementById("festivalText").innerHTML = document.getElementById("newFestival").value;
+    }
+    if(document.getElementById("newMap").value.trim() !== ""){
+        document.getElementById("mapLink").href = document.getElementById("newMap").value;
+    }
+    
+    // Direct Image upload mapping hook
+    if(uploadedImageBase64 !== ""){
+        document.getElementById("mainPhoto").src = uploadedImageBase64;
+        document.getElementById("galleryPhoto1").src = uploadedImageBase64;
+    }
+    
+    alert("Changes committed successfully to current session view!");
+    closeAdmin();
+    
+    // Auto refresh search results to show new content
+    document.getElementById("templeContent").classList.remove("hidden");
 }
-
 </script>
-
 </body>
 </html>
