@@ -1,13 +1,29 @@
+<!-- =====================================================
+Naihati Bhuniarah Kalondiray Shiv Mondir
+Image Rename Guide:
+
+1st big background image  = hero.jpg
+2nd image                 = temple1.jpg
+3rd image                 = temple2.jpg
+4th image                 = temple3.jpg
+5th image                 = temple4.jpg
+
+সব ছবি একই folder এ রাখবে।
+এই কোড index.html নামে save করবে।
+===================================================== -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Naihati Shibtola Temple</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Naihati Bhuniarah Kalondiray Shiv Mondir</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -17,290 +33,341 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#f5f5f5;
+background:#f4f4f4;
 color:#222;
 overflow-x:hidden;
 }
 
+/* HERO SECTION */
+
 .hero{
 height:100vh;
-background:url('images/temple1.jpg') center center/cover no-repeat;
-position:relative;
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('hero.jpg');
+background-size:cover;
+background-position:center;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
-}
-
-.hero::before{
-content:'';
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.55);
-top:0;
-left:0;
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-color:white;
 padding:20px;
 }
 
+.hero-content{
+max-width:1000px;
+animation:fadeIn 2s ease;
+}
+
 .hero h1{
-font-size:60px;
-margin-bottom:15px;
-text-shadow:0 0 10px black;
+font-size:75px;
+color:#fff;
+font-family:'Noto Serif Bengali',serif;
+text-shadow:0 0 15px rgba(0,0,0,0.8);
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:22px;
+font-size:28px;
+color:#fff;
+margin-bottom:35px;
+font-family:'Noto Serif Bengali',serif;
 }
 
-.lang-btns{
-margin-top:25px;
+.lang-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.lang-btns button{
-padding:12px 25px;
+.lang-buttons button{
+padding:15px 35px;
 border:none;
-margin:5px;
-border-radius:30px;
-font-size:16px;
-cursor:pointer;
+border-radius:40px;
 background:#ff9800;
 color:white;
-transition:.3s;
-font-weight:bold;
+font-size:20px;
+font-weight:600;
+cursor:pointer;
+transition:0.4s;
 }
 
-.lang-btns button:hover{
-background:#e68900;
+.lang-buttons button:hover{
+background:#d97706;
 transform:scale(1.05);
 }
 
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:70px 0;
+/* SECTION */
+
+.section{
+padding:90px 8%;
 }
 
 .section-title{
 text-align:center;
-font-size:40px;
-margin-bottom:40px;
-color:#b71c1c;
-position:relative;
+font-size:52px;
+color:#a50000;
+margin-bottom:20px;
+font-family:'Noto Serif Bengali',serif;
 }
 
-.section-title::after{
-content:'';
-width:100px;
-height:4px;
+.underline{
+width:120px;
+height:5px;
 background:#ff9800;
-position:absolute;
-bottom:-10px;
-left:50%;
-transform:translateX(-50%);
+margin:0 auto 50px;
 border-radius:20px;
 }
 
-.info-box{
+/* ABOUT */
+
+.about-box{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+line-height:1.9;
+font-size:20px;
+}
+
+/* INFO BOXES */
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.info-card{
 background:white;
 padding:35px;
 border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-line-height:1.9;
-font-size:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+transition:0.4s;
 }
+
+.info-card:hover{
+transform:translateY(-10px);
+}
+
+.info-card h3{
+font-size:28px;
+margin-bottom:20px;
+color:#c0392b;
+font-family:'Noto Serif Bengali',serif;
+}
+
+.info-card p{
+font-size:18px;
+line-height:1.8;
+}
+
+/* GALLERY */
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .gallery img{
 width:100%;
-height:350px;
+height:380px;
 object-fit:cover;
-border-radius:18px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-transition:.4s;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.5s;
 }
 
 .gallery img:hover{
-transform:scale(1.03);
+transform:scale(1.04);
 }
 
-.map-box{
-margin-top:25px;
-text-align:center;
-}
+/* VIDEO */
 
-.map-box a{
-display:inline-block;
-padding:15px 35px;
-background:#d32f2f;
-color:white;
-text-decoration:none;
-border-radius:40px;
-font-size:18px;
-font-weight:bold;
-transition:.3s;
-}
-
-.map-box a:hover{
-background:#b71c1c;
-}
-
-.socials{
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.socials a{
-padding:15px 30px;
-background:#222;
-color:white;
-text-decoration:none;
-border-radius:40px;
-font-size:17px;
-transition:.3s;
-}
-
-.socials a:hover{
-background:#ff9800;
-}
-
-.video-box{
+.video-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
 margin-top:40px;
-display:flex;
-justify-content:center;
 }
 
-iframe{
+.video-container iframe{
 width:100%;
-max-width:900px;
-height:500px;
+height:320px;
 border:none;
 border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.25);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
+
+/* SOCIAL */
+
+.social{
+text-align:center;
+margin-top:50px;
+}
+
+.social a{
+display:inline-block;
+margin:15px;
+padding:15px 35px;
+background:#ff9800;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-size:20px;
+font-weight:600;
+transition:0.4s;
+}
+
+.social a:hover{
+background:#d97706;
+transform:scale(1.05);
+}
+
+/* FOOTER */
 
 footer{
 background:#111;
 color:white;
 text-align:center;
 padding:30px;
-margin-top:50px;
-font-size:17px;
+margin-top:80px;
+font-size:18px;
 }
 
-.hidden{
-display:none;
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
 }
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE */
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:38px;
+font-size:42px;
 }
 
 .hero p{
-font-size:18px;
+font-size:20px;
 }
 
 .section-title{
-font-size:32px;
+font-size:38px;
 }
 
-iframe{
-height:250px;
+.about-box{
+padding:25px;
+font-size:18px;
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 <section class="hero">
+
 <div class="hero-content">
 
-<h1 id="title">Naihati Shibtola Temple</h1>
+<h1 id="title">
+নৈহাটী ভূঁইয়ারা কালন্দিরায় শিব মন্দির
+</h1>
 
 <p id="subtitle">
-Ancient Shiva Temple of Naihati
+নৈহাটীর প্রাচীন শিব মন্দির
 </p>
 
-<div class="lang-btns">
+<div class="lang-buttons">
 <button onclick="setEnglish()">English</button>
-<button onclick="setBengali()">বাংলা</button>
+<button onclick="setBangla()">বাংলা</button>
 </div>
 
 </div>
+
 </section>
 
 <!-- ABOUT -->
 
-<section class="container">
+<section class="section">
 
-<h2 class="section-title" id="aboutTitle">
-About Temple
+<h2 class="section-title" id="history-title">
+মন্দিরের ইতিহাস
 </h2>
 
-<div class="info-box">
+<div class="underline"></div>
 
-<p id="aboutText">
+<div class="about-box" id="history-text">
 
-Naihati Shibtola Temple is a sacred Shiva temple located at Naihati (Shibtola/Marotola), Post-Arit, Dist-Paschim Medinipur, Pin-721148.  
-The temple is a place of devotion, peace and spirituality for local devotees.
+নৈহাটী ভূঁইয়ারা কালন্দিরায় শিব মন্দির পশ্চিম মেদিনীপুর জেলার একটি ঐতিহ্যবাহী ও প্রাচীন শিব মন্দির।
+এই মন্দির বহু বছর ধরে এলাকার মানুষের আস্থা, বিশ্বাস ও ধর্মীয় ভক্তির কেন্দ্র হিসেবে পরিচিত।
 
-Recently the temple has been newly reconstructed and inaugurated on:
-17/06/2024 (English Date)
-12/03/1431 (Bangla Date)
+সম্প্রতি মন্দিরটির নবরূপে পুনর্নির্মাণ করা হয়েছে এবং নতুনভাবে মন্দিরের শুভ সূচনা হয়েছে ইংরেজি 17/06/2024 ও বাংলা ১২/০৩/১৪৩১ তারিখে।
 
-Devotees gather here during festivals, Shiva Puja and religious events throughout the year.
-
-</p>
-
-<div class="map-box">
-<a href="https://maps.app.goo.gl/KMwvLJ4U3DP8rWuV7" target="_blank">
-Open Google Map
-</a>
-</div>
+মন্দিরের পরিবেশ, শিল্পকর্ম ও স্থাপত্য অত্যন্ত সুন্দর ও মনোমুগ্ধকর। প্রতি বছর এখানে ধর্মীয় অনুষ্ঠান, পূজা ও উৎসবের আয়োজন করা হয়।
 
 </div>
 
 </section>
 
-<!-- HISTORY -->
+<!-- TEMPLE INFO -->
 
-<section class="container">
+<section class="section">
 
-<h2 class="section-title" id="historyTitle">
-Temple History
+<h2 class="section-title" id="info-title">
+মন্দির সম্পর্কিত তথ্য
 </h2>
 
-<div class="info-box">
+<div class="underline"></div>
 
-<p id="historyText">
+<div class="info-grid">
 
-The old temple of Naihati Shibtola was an important spiritual center for the village people for many years.  
-Over time, the temple became aged and later a beautiful new temple was constructed with the support and devotion of local villagers and devotees.
+<div class="info-card">
+<h3 id="address-title">ঠিকানা</h3>
 
-Today the temple stands as a symbol of faith, culture and unity among the people of Naihati and nearby villages.
-
+<p id="address-text">
+Naihati (Naihati Shibtola/Marotola)<br>
+Post - Arit<br>
+Dist - Paschim Medinipur<br>
+Pin - 721148
 </p>
+</div>
+
+<div class="info-card">
+<h3 id="opening-title">নতুন সূচনা</h3>
+
+<p id="opening-text">
+ইংরেজি - 17/06/2024<br><br>
+বাংলা - ১২/০৩/১৪৩১
+</p>
+</div>
+
+<div class="info-card">
+<h3 id="map-title">Google Map</h3>
+
+<p>
+<a href="https://maps.google.com"
+target="_blank"
+style="color:#c0392b;font-weight:bold;text-decoration:none;">
+লোকেশন দেখুন
+</a>
+</p>
+</div>
 
 </div>
 
@@ -308,35 +375,44 @@ Today the temple stands as a symbol of faith, culture and unity among the people
 
 <!-- GALLERY -->
 
-<section class="container">
+<section class="section">
 
-<h2 class="section-title" id="galleryTitle">
-Temple Photos
+<h2 class="section-title" id="gallery-title">
+মন্দিরের ছবি
 </h2>
+
+<div class="underline"></div>
 
 <div class="gallery">
 
-<img src="images/temple1.jpg">
-<img src="images/temple2.jpg">
-<img src="images/temple3.jpg">
-<img src="images/temple4.jpg">
+<img src="temple1.jpg" alt="">
+<img src="temple2.jpg" alt="">
+<img src="temple3.jpg" alt="">
+<img src="temple4.jpg" alt="">
 
 </div>
 
 </section>
 
-<!-- VIDEO -->
+<!-- VIDEOS -->
 
-<section class="container">
+<section class="section">
 
-<h2 class="section-title">
-Temple Video
+<h2 class="section-title" id="video-title">
+ভিডিও ও তথ্য
 </h2>
 
-<div class="video-box">
+<div class="underline"></div>
 
-<iframe 
+<div class="video-container">
+
+<iframe
 src="https://www.youtube.com/embed/-seaIFm1AFE"
+allowfullscreen>
+</iframe>
+
+<iframe
+src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100086899041731/posts/943786715194621/"
 allowfullscreen>
 </iframe>
 
@@ -346,19 +422,23 @@ allowfullscreen>
 
 <!-- SOCIAL -->
 
-<section class="container">
+<section class="section">
 
-<h2 class="section-title">
-Social Links
+<h2 class="section-title" id="social-title">
+সোশ্যাল মিডিয়া
 </h2>
 
-<div class="socials">
+<div class="underline"></div>
 
-<a href="https://www.facebook.com/profile.php?id=100086899041731" target="_blank">
+<div class="social">
+
+<a href="https://www.facebook.com/profile.php?id=100086899041731"
+target="_blank">
 Facebook Page
 </a>
 
-<a href="https://www.youtube.com/@নৈহাটীশিবতলাFestival" target="_blank">
+<a href="https://www.youtube.com/@নৈহাটীশিবতলাFestival"
+target="_blank">
 YouTube Channel
 </a>
 
@@ -366,88 +446,104 @@ YouTube Channel
 
 </section>
 
-<footer>
-
-© 2025 Naihati Shibtola Temple | Developed for Temple Information & Devotion
-
+<footer id="footer-text">
+© 2025 Naihati Bhuniarah Kalondiray Shiv Mondir
 </footer>
 
 <script>
 
-function setBengali(){
+function setEnglish(){
 
-document.getElementById("title").innerHTML="নৈহাটী শিবতলা মন্দির";
+document.getElementById("title").innerHTML =
+"Naihati Bhuniarah Kalondiray Shiv Mondir";
 
-document.getElementById("subtitle").innerHTML=
-"নৈহাটীর প্রাচীন শিব মন্দির";
+document.getElementById("subtitle").innerHTML =
+"Ancient Shiv Temple of Naihati";
 
-document.getElementById("aboutTitle").innerHTML=
-"মন্দির পরিচিতি";
+document.getElementById("history-title").innerHTML =
+"Temple History";
 
-document.getElementById("aboutText").innerHTML=
+document.getElementById("history-text").innerHTML =
 `
-নৈহাটী শিবতলা মন্দির পশ্চিম মেদিনীপুর জেলার নৈহাটী (শিবতলা/মাড়োতলা), পোস্ট-আরিত এলাকায় অবস্থিত একটি পবিত্র শিব মন্দির।  
-এই মন্দির স্থানীয় ভক্তদের কাছে অত্যন্ত শ্রদ্ধার ও আস্থার কেন্দ্র।
+Naihati Bhuniarah Kalondiray Shiv Mondir is one of the ancient and traditional Shiv temples of Paschim Medinipur.
 
-নতুনভাবে নির্মিত এই মন্দিরের শুভ সূচনা হয়:
-ইংরেজি - ১৭/০৬/২০২৪  
-বাংলা - ১২/০৩/১৪৩১
+The temple has long been a center of devotion, faith and spirituality for local people.
 
-বছরের বিভিন্ন সময়ে এখানে শিব পূজা, উৎসব ও ধর্মীয় অনুষ্ঠানের আয়োজন করা হয়।
+Recently the temple has been beautifully reconstructed and newly inaugurated on 17/06/2024 and Bengali date 12/03/1431.
+
+The architecture, carvings and peaceful atmosphere of the temple attract devotees and visitors throughout the year.
 `;
 
-document.getElementById("historyTitle").innerHTML=
-"মন্দিরের ইতিহাস";
+document.getElementById("info-title").innerHTML =
+"Temple Information";
 
-document.getElementById("historyText").innerHTML=
-`
-নৈহাটী শিবতলার পুরাতন মন্দির বহু বছর ধরে এলাকার মানুষের আধ্যাত্মিক কেন্দ্র হিসেবে পরিচিত ছিল।  
-সময়ের সাথে পুরনো মন্দিরটি জীর্ণ হয়ে পড়লে গ্রামের মানুষ ও ভক্তদের সহযোগিতায় নতুন সুন্দর মন্দির নির্মাণ করা হয়।
+document.getElementById("address-title").innerHTML =
+"Address";
 
-বর্তমানে এই মন্দির নৈহাটী ও আশেপাশের এলাকার মানুষের বিশ্বাস, সংস্কৃতি ও ঐক্যের প্রতীক হয়ে দাঁড়িয়েছে।
-`;
+document.getElementById("opening-title").innerHTML =
+"New Inauguration";
 
-document.getElementById("galleryTitle").innerHTML=
-"মন্দিরের ছবি";
+document.getElementById("map-title").innerHTML =
+"Google Map";
+
+document.getElementById("gallery-title").innerHTML =
+"Temple Gallery";
+
+document.getElementById("video-title").innerHTML =
+"Videos & Information";
+
+document.getElementById("social-title").innerHTML =
+"Social Media";
+
+document.getElementById("footer-text").innerHTML =
+"© 2025 Naihati Bhuniarah Kalondiray Shiv Mondir";
 
 }
 
-function setEnglish(){
+function setBangla(){
 
-document.getElementById("title").innerHTML=
-"Naihati Shibtola Temple";
+document.getElementById("title").innerHTML =
+"নৈহাটী ভূঁইয়ারা কালন্দিরায় শিব মন্দির";
 
-document.getElementById("subtitle").innerHTML=
-"Ancient Shiva Temple of Naihati";
+document.getElementById("subtitle").innerHTML =
+"নৈহাটীর প্রাচীন শিব মন্দির";
 
-document.getElementById("aboutTitle").innerHTML=
-"About Temple";
+document.getElementById("history-title").innerHTML =
+"মন্দিরের ইতিহাস";
 
-document.getElementById("aboutText").innerHTML=
+document.getElementById("history-text").innerHTML =
 `
-Naihati Shibtola Temple is a sacred Shiva temple located at Naihati (Shibtola/Marotola), Post-Arit, Dist-Paschim Medinipur, Pin-721148.  
-The temple is a place of devotion, peace and spirituality for local devotees.
+নৈহাটী ভূঁইয়ারা কালন্দিরায় শিব মন্দির পশ্চিম মেদিনীপুর জেলার একটি ঐতিহ্যবাহী ও প্রাচীন শিব মন্দির।
+এই মন্দির বহু বছর ধরে এলাকার মানুষের আস্থা, বিশ্বাস ও ধর্মীয় ভক্তির কেন্দ্র হিসেবে পরিচিত।
 
-Recently the temple has been newly reconstructed and inaugurated on:
-17/06/2024 (English Date)
-12/03/1431 (Bangla Date)
+সম্প্রতি মন্দিরটির নবরূপে পুনর্নির্মাণ করা হয়েছে এবং নতুনভাবে মন্দিরের শুভ সূচনা হয়েছে ইংরেজি 17/06/2024 ও বাংলা ১২/০৩/১৪৩১ তারিখে।
 
-Devotees gather here during festivals, Shiva Puja and religious events throughout the year.
+মন্দিরের পরিবেশ, শিল্পকর্ম ও স্থাপত্য অত্যন্ত সুন্দর ও মনোমুগ্ধকর।
 `;
 
-document.getElementById("historyTitle").innerHTML=
-"Temple History";
+document.getElementById("info-title").innerHTML =
+"মন্দির সম্পর্কিত তথ্য";
 
-document.getElementById("historyText").innerHTML=
-`
-The old temple of Naihati Shibtola was an important spiritual center for the village people for many years.  
-Over time, the temple became aged and later a beautiful new temple was constructed with the support and devotion of local villagers and devotees.
+document.getElementById("address-title").innerHTML =
+"ঠিকানা";
 
-Today the temple stands as a symbol of faith, culture and unity among the people of Naihati and nearby villages.
-`;
+document.getElementById("opening-title").innerHTML =
+"নতুন সূচনা";
 
-document.getElementById("galleryTitle").innerHTML=
-"Temple Photos";
+document.getElementById("map-title").innerHTML =
+"Google Map";
+
+document.getElementById("gallery-title").innerHTML =
+"মন্দিরের ছবি";
+
+document.getElementById("video-title").innerHTML =
+"ভিডিও ও তথ্য";
+
+document.getElementById("social-title").innerHTML =
+"সোশ্যাল মিডিয়া";
+
+document.getElementById("footer-text").innerHTML =
+"© 2025 নৈহাটী ভূঁইয়ারা কালন্দিরায় শিব মন্দির";
 
 }
 
