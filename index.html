@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Baba Kalondiroy Shiv Temple</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Naihati Shibtola Temple</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{
 margin:0;
@@ -13,426 +16,442 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family: 'Segoe UI', Arial, 'Noto Sans Bengali', sans-serif;
-background:#f8f5ef;
+font-family:'Poppins',sans-serif;
+background:#f5f5f5;
 color:#222;
+overflow-x:hidden;
 }
 
-/* Hero Background Styled with Google Maps Street view vibe */
 .hero{
-height:75vh;
-background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1920');
-background-size:cover;
-background-position:center;
+height:100vh;
+background:url('images/temple1.jpg') center center/cover no-repeat;
+position:relative;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+top:0;
+left:0;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
 color:white;
-border-b: 5px solid #8b5e00;
+padding:20px;
 }
 
-.hero-content h1{
-font-size:48px;
+.hero h1{
+font-size:60px;
 margin-bottom:15px;
-text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+text-shadow:0 0 10px black;
 }
 
-.hero-content p{
+.hero p{
 font-size:22px;
-margin-bottom:10px;
-color: #ffb74d;
-font-weight: bold;
-text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.lang-btns{
+margin-top:25px;
+}
+
+.lang-btns button{
+padding:12px 25px;
+border:none;
+margin:5px;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+background:#ff9800;
+color:white;
+transition:.3s;
+font-weight:bold;
+}
+
+.lang-btns button:hover{
+background:#e68900;
+transform:scale(1.05);
 }
 
 .container{
-width:92%;
+width:90%;
 max-width:1200px;
 margin:auto;
-padding:40px 0;
+padding:70px 0;
 }
 
-.card{
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+color:#b71c1c;
+position:relative;
+}
+
+.section-title::after{
+content:'';
+width:100px;
+height:4px;
+background:#ff9800;
+position:absolute;
+bottom:-10px;
+left:50%;
+transform:translateX(-50%);
+border-radius:20px;
+}
+
+.info-box{
 background:white;
-padding:30px;
-margin-bottom:30px;
-border-radius:18px;
-box-shadow:0 4px 15px rgba(0,0,0,.08);
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+line-height:1.9;
+font-size:18px;
 }
-
-.card h2{
-margin-bottom:15px;
-color:#8b5e00;
-font-size: 24px;
-border-bottom: 2px solid #f0e6d2;
-padding-bottom: 8px;
-}
-
-.main-photo{
-width:100%;
-border-radius:15px;
-max-height:500px;
-object-fit:cover;
-}
-
-/* Social Media Channels Embedded Box */
-.social-box {
-display: flex;
-gap: 15px;
-flex-wrap: wrap;
-margin-top: 15px;
-}
-
-.social-btn {
-display: inline-flex;
-align-items: center;
-gap: 10px;
-padding: 12px 20px;
-color: white;
-text-decoration: none;
-border-radius: 10px;
-font-weight: bold;
-transition: 0.2s;
-font-size: 15px;
-}
-
-.btn-fb { background: #1877F2; }
-.btn-fb:hover { background: #145db2; }
-.btn-yt { background: #FF0000; }
-.btn-yt:hover { background: #cc0000; }
-.btn-map { background: #4CAF50; }
-.btn-map:hover { background: #388E3C; }
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:18px;
-margin-top:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .gallery img{
 width:100%;
-height:260px;
+height:350px;
 object-fit:cover;
-border-radius:12px;
-transition:.3s;
-cursor:pointer;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:.4s;
 }
 
 .gallery img:hover{
 transform:scale(1.03);
 }
 
-.festival-list{
-line-height:1.8;
-font-size: 16px;
+.map-box{
+margin-top:25px;
+text-align:center;
+}
+
+.map-box a{
+display:inline-block;
+padding:15px 35px;
+background:#d32f2f;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-size:18px;
+font-weight:bold;
+transition:.3s;
+}
+
+.map-box a:hover{
+background:#b71c1c;
+}
+
+.socials{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.socials a{
+padding:15px 30px;
+background:#222;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-size:17px;
+transition:.3s;
+}
+
+.socials a:hover{
+background:#ff9800;
+}
+
+.video-box{
+margin-top:40px;
+display:flex;
+justify-content:center;
+}
+
+iframe{
+width:100%;
+max-width:900px;
+height:500px;
+border:none;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
 footer{
 background:#111;
 color:white;
 text-align:center;
-padding:25px;
-margin-top:40px;
-}
-
-.admin-icon{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#8b5e00;
-color:white;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-cursor:pointer;
-box-shadow:0 4px 10px rgba(0,0,0,.3);
-z-index:999;
-}
-
-.login-popup{
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-background:white;
 padding:30px;
-border-radius:18px;
-box-shadow:0 5px 20px rgba(0,0,0,.2);
-width:320px;
+margin-top:50px;
+font-size:17px;
+}
+
+.hidden{
 display:none;
-z-index:1000;
-}
-
-.login-popup h2{
-margin-bottom:20px;
-text-align:center;
-}
-
-.login-popup input,
-.admin-panel input,
-.admin-panel textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:10px;
-}
-
-.login-popup button,
-.admin-panel button{
-width:100%;
-padding:14px;
-background:#8b5e00;
-color:white;
-border:none;
-border-radius:10px;
-font-size:16px;
-cursor:pointer;
-}
-
-.admin-panel{
-display:none;
-position:fixed;
-top:0;
-right:0;
-width:350px;
-height:100%;
-background:white;
-padding:25px;
-overflow:auto;
-box-shadow:-4px 0 15px rgba(0,0,0,.2);
-z-index:1200;
-}
-
-.close-btn{
-background:red !important;
-margin-top:10px;
-}
-
-.file-input-label {
-display: block;
-padding: 10px;
-background: #eee;
-text-align: center;
-border-radius: 10px;
-cursor: pointer;
-margin: 10px 0;
-font-weight: bold;
-border: 1px dashed #8b5e00;
 }
 
 @media(max-width:768px){
-.hero-content h1{ font-size:32px; }
-.hero-content p{ font-size:18px; }
-.hero{ height:60vh; }
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+iframe{
+height:250px;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION (NO SEARCH BOX - DIRECT LOAD) -->
+<!-- HERO SECTION -->
+
 <section class="hero">
 <div class="hero-content">
-<h1 id="templeTitle">🛕 Baba Kalondiroy Shiv Temple</h1>
-<p>নৈহাটী ভূঁইআড়া শিবতলা • Daspur</p>
-<p style="font-size:16px; color:#fff; font-weight:normal;">Festivals • Heritage • Devotion</p>
+
+<h1 id="title">Naihati Shibtola Temple</h1>
+
+<p id="subtitle">
+Ancient Shiva Temple of Naihati
+</p>
+
+<div class="lang-btns">
+<button onclick="setEnglish()">English</button>
+<button onclick="setBengali()">বাংলা</button>
+</div>
+
 </div>
 </section>
 
-<!-- MAIN CONTENT SECTION -->
-<div class="container">
-<section id="templeContent">
-<div class="card">
-<img id="mainPhoto" class="main-photo" src="https://images.unsplash.com/photo-1626621341515-bbf8a96e494b?q=80&w=1200">
-</div>
+<!-- ABOUT -->
 
-<div class="card">
-<h2>📜 Temple History / মন্দিরের ইতিহাস</h2>
-<p id="historyText" style="text-align: justify; line-height: 1.8; font-size: 16px;">
-The sacred legacy of Baba Kalondiroy Shiv Temple spans well over a century, standing as an eternal testament to divine miracles, rich cultural heritage, and the absolute devotion of the local community. Unlike modern temples, the spiritual core of this shrine holds a magnificent Swayambhu Lingam—a self-manifested deity that emerged naturally from the deep womb of the earth. Local generations firmly believe that this sacred stone is a direct, divine portal originating from the mystical realm of Patal Lok, pushing its way into the mortal world to bless and protect humanity.<br><br>
-According to ancient lore passed down by village elders, this heavenly presence was first discovered hidden beneath the rustic shade of a sacred Choi tree. In those early days, it was nothing more than a humble, small clearing where devotees gathered to offer simple prayers. As the divine fame of Baba Kalondiroy spread, the community united to construct a permanent home for the deity. This first historic structure was built using the ancient architectural methods of Bengal—crafted entirely out of traditional Chun-Surki (lime and brick mortar). To honor the Lord, ancient artisans spent years carving intricate, hand-made terracotta motifs and murtis onto its walls, alongside majestic creations of traditional animals like tigers and lions, showcasing a rich era of regional art.<br><br>
-However, as the decades rolled by, the antique structure suffered severe structural decay due to the harsh elements of time, eventually becoming dilapidated and distressed. Seeing their beloved shrine in danger, the residents of two neighboring villages—Naihati and Bhuniarah—came together as a single family. Bound by their shared duty as the rightful custodians of Baba Kalondiroy, the people executed a massive, historic renovation project approximately 30 years ago, breathing new life into the weakening walls and preserving the sacred compound for their children.<br><br>
-Today, history is turning its most magnificent page yet. Driven by a shared divine inspiration and the collective command of the people, the united communities of Naihati and Bhuniarah have taken a monumental resolution. Recognizing that the old structure can no longer accommodate the thousands of pilgrims who gather here, they have decided to reconstruct the entire shrine from its very foundations. This ambitious modern project is currently underway to build a breathtaking, sky-piercing architectural marvel. Once completed, this monumental crown jewel will proudly stand as the grandest and biggest Shiv Temple in the entire Daspur region, carrying the glorious name of Baba Kalondiroy into the next century.
+<section class="container">
+
+<h2 class="section-title" id="aboutTitle">
+About Temple
+</h2>
+
+<div class="info-box">
+
+<p id="aboutText">
+
+Naihati Shibtola Temple is a sacred Shiva temple located at Naihati (Shibtola/Marotola), Post-Arit, Dist-Paschim Medinipur, Pin-721148.  
+The temple is a place of devotion, peace and spirituality for local devotees.
+
+Recently the temple has been newly reconstructed and inaugurated on:
+17/06/2024 (English Date)
+12/03/1431 (Bangla Date)
+
+Devotees gather here during festivals, Shiva Puja and religious events throughout the year.
+
 </p>
+
+<div class="map-box">
+<a href="https://maps.app.goo.gl/KMwvLJ4U3DP8rWuV7" target="_blank">
+Open Google Map
+</a>
 </div>
 
-<!-- INTEGRATED SOCIAL LINKS BOX -->
-<div class="card">
-<h2>🌐 Official Social Media & Location Links</h2>
-<p style="margin-bottom: 15px; color:#555;">মন্দিরের অফিসিয়াল ফেসবুক, ইউটিউব চ্যানেল এবং গুগল ম্যাপস এর লিংক নিচে দেওয়া হলো:</p>
-<div class="social-box">
-<a id="fbLink" class="social-btn btn-fb" href="https://www.facebook.com" target="_blank">👥 Facebook Page</a>
-<a id="ytLink" class="social-btn btn-yt" href="https://www.youtube.com" target="_blank">📺 YouTube Channel</a>
-<a id="mapLink" class="social-btn btn-map" href="https://maps.app.goo.gl/KMwvLJ4U3DP8rWuV7" target="_blank">📍 Google Maps Location</a>
-</div>
 </div>
 
-<div class="card">
-<h2>📍 Temple Address / মন্দিরের ঠিকানা</h2>
-<p id="addressText" style="font-size: 16px; line-height: 1.8;">
-<b>Village:</b> Naihati (নৈহাটী)<br>
-<b>Post:</b> Arit (অরিৎ)<br>
-<b>District:</b> Paschim Medinipur (পশ্চিম মেদিনীপুর)<br>
-<b>PIN:</b> 721148
+</section>
+
+<!-- HISTORY -->
+
+<section class="container">
+
+<h2 class="section-title" id="historyTitle">
+Temple History
+</h2>
+
+<div class="info-box">
+
+<p id="historyText">
+
+The old temple of Naihati Shibtola was an important spiritual center for the village people for many years.  
+Over time, the temple became aged and later a beautiful new temple was constructed with the support and devotion of local villagers and devotees.
+
+Today the temple stands as a symbol of faith, culture and unity among the people of Naihati and nearby villages.
+
 </p>
+
 </div>
 
-<div class="card">
-<h2>🎭 Festivals & Programs / উৎসব ও অনুষ্ঠান</h2>
-<div id="festivalText" class="festival-list">
-Baba Kalondiroy Temple comes alive during major festivals like Maha Shivratri, the annual Gajan festival and mela, and the holy month of Shravan, which draws thousands of devotees to pour sacred water on the Swayambhu.
-</div>
-</div>
+</section>
 
-<div class="card">
-<h2>🖼️ Temple Gallery / গ্যালারি</h2>
+<!-- GALLERY -->
+
+<section class="container">
+
+<h2 class="section-title" id="galleryTitle">
+Temple Photos
+</h2>
+
 <div class="gallery">
-<img id="galleryPhoto1" src="https://images.unsplash.com/photo-1626621341515-bbf8a96e494b?q=80&w=1200">
-<img src="https://images.unsplash.com/photo-1609137144813-094119d67571?q=80&w=1200">
-<img src="https://images.unsplash.com/photo-1545128485-c400e7702796?q=80&w=1200">
-<img src="https://images.unsplash.com/photo-1561361531-9952a7879303?q=80&w=1200">
+
+<img src="images/temple1.jpg">
+<img src="images/temple2.jpg">
+<img src="images/temple3.jpg">
+<img src="images/temple4.jpg">
+
 </div>
-</div>
+
 </section>
+
+<!-- VIDEO -->
+
+<section class="container">
+
+<h2 class="section-title">
+Temple Video
+</h2>
+
+<div class="video-box">
+
+<iframe 
+src="https://www.youtube.com/embed/-seaIFm1AFE"
+allowfullscreen>
+</iframe>
+
 </div>
 
-<!-- FIXED ADMIN GEAR ICON -->
-<div class="admin-icon" onclick="openLogin()">⚙️</div>
+</section>
 
-<!-- PASSWORD ONLY LOGIN POPUP -->
-<div class="login-popup" id="loginPopup">
-<h2>Admin Login</h2>
-<input type="password" id="password" placeholder="Enter Password">
-<button onclick="loginAdmin()">Login</button>
-<button class="close-btn" onclick="closeLogin()" style="padding:8px; font-size:12px;">Cancel</button>
+<!-- SOCIAL -->
+
+<section class="container">
+
+<h2 class="section-title">
+Social Links
+</h2>
+
+<div class="socials">
+
+<a href="https://www.facebook.com/profile.php?id=100086899041731" target="_blank">
+Facebook Page
+</a>
+
+<a href="https://www.youtube.com/@নৈহাটীশিবতলাFestival" target="_blank">
+YouTube Channel
+</a>
+
 </div>
 
-<!-- ADMIN CONTROL PANEL -->
-<div class="admin-panel" id="adminPanel">
-<h2>Temple Update Panel</h2>
-<hr><br>
-
-<label><b>Update Temple Title:</b></label>
-<input type="text" id="newTitle">
-
-<label><b>Upload New Main Photo:</b></label>
-<label class="file-input-label">
-📁 Choose Image File
-<input type="file" id="fileUpload" accept="image/*" style="display:none;">
-</label>
-<span id="fileNameDisplay" style="font-size:12px; color:green; display:block; margin-bottom:10px;"></span>
-
-<label><b>Update History/Story Text:</b></label>
-<textarea id="newHistory" rows="6"></textarea>
-
-<label><b>Update Festivals Line:</b></label>
-<textarea id="newFestival" rows="4"></textarea>
-
-<label><b>Update Facebook Link:</b></label>
-<input type="text" id="newFb" placeholder="Facebook URL">
-
-<label><b>Update YouTube Link:</b></label>
-<input type="text" id="newYt" placeholder="YouTube URL">
-
-<label><b>Update Google Map Link:</b></label>
-<input type="text" id="newMap" placeholder="Google Map URL">
-
-<button onclick="updateTemple()">Save & Apply Changes</button>
-<button class="close-btn" onclick="closeAdmin()">Close</button>
-</div>
+</section>
 
 <footer>
-© 2026 Baba Kalondiroy Shiv Temple | Naihati Shivtala
+
+© 2025 Naihati Shibtola Temple | Developed for Temple Information & Devotion
+
 </footer>
 
 <script>
-const adminPass = "2024asd";
-let uploadedImageBase64 = "";
 
-function openLogin(){
-    document.getElementById("loginPopup").style.display = "block";
+function setBengali(){
+
+document.getElementById("title").innerHTML="নৈহাটী শিবতলা মন্দির";
+
+document.getElementById("subtitle").innerHTML=
+"নৈহাটীর প্রাচীন শিব মন্দির";
+
+document.getElementById("aboutTitle").innerHTML=
+"মন্দির পরিচিতি";
+
+document.getElementById("aboutText").innerHTML=
+`
+নৈহাটী শিবতলা মন্দির পশ্চিম মেদিনীপুর জেলার নৈহাটী (শিবতলা/মাড়োতলা), পোস্ট-আরিত এলাকায় অবস্থিত একটি পবিত্র শিব মন্দির।  
+এই মন্দির স্থানীয় ভক্তদের কাছে অত্যন্ত শ্রদ্ধার ও আস্থার কেন্দ্র।
+
+নতুনভাবে নির্মিত এই মন্দিরের শুভ সূচনা হয়:
+ইংরেজি - ১৭/০৬/২০২৪  
+বাংলা - ১২/০৩/১৪৩১
+
+বছরের বিভিন্ন সময়ে এখানে শিব পূজা, উৎসব ও ধর্মীয় অনুষ্ঠানের আয়োজন করা হয়।
+`;
+
+document.getElementById("historyTitle").innerHTML=
+"মন্দিরের ইতিহাস";
+
+document.getElementById("historyText").innerHTML=
+`
+নৈহাটী শিবতলার পুরাতন মন্দির বহু বছর ধরে এলাকার মানুষের আধ্যাত্মিক কেন্দ্র হিসেবে পরিচিত ছিল।  
+সময়ের সাথে পুরনো মন্দিরটি জীর্ণ হয়ে পড়লে গ্রামের মানুষ ও ভক্তদের সহযোগিতায় নতুন সুন্দর মন্দির নির্মাণ করা হয়।
+
+বর্তমানে এই মন্দির নৈহাটী ও আশেপাশের এলাকার মানুষের বিশ্বাস, সংস্কৃতি ও ঐক্যের প্রতীক হয়ে দাঁড়িয়েছে।
+`;
+
+document.getElementById("galleryTitle").innerHTML=
+"মন্দিরের ছবি";
+
 }
 
-function closeLogin(){
-    document.getElementById("loginPopup").style.display = "none";
+function setEnglish(){
+
+document.getElementById("title").innerHTML=
+"Naihati Shibtola Temple";
+
+document.getElementById("subtitle").innerHTML=
+"Ancient Shiva Temple of Naihati";
+
+document.getElementById("aboutTitle").innerHTML=
+"About Temple";
+
+document.getElementById("aboutText").innerHTML=
+`
+Naihati Shibtola Temple is a sacred Shiva temple located at Naihati (Shibtola/Marotola), Post-Arit, Dist-Paschim Medinipur, Pin-721148.  
+The temple is a place of devotion, peace and spirituality for local devotees.
+
+Recently the temple has been newly reconstructed and inaugurated on:
+17/06/2024 (English Date)
+12/03/1431 (Bangla Date)
+
+Devotees gather here during festivals, Shiva Puja and religious events throughout the year.
+`;
+
+document.getElementById("historyTitle").innerHTML=
+"Temple History";
+
+document.getElementById("historyText").innerHTML=
+`
+The old temple of Naihati Shibtola was an important spiritual center for the village people for many years.  
+Over time, the temple became aged and later a beautiful new temple was constructed with the support and devotion of local villagers and devotees.
+
+Today the temple stands as a symbol of faith, culture and unity among the people of Naihati and nearby villages.
+`;
+
+document.getElementById("galleryTitle").innerHTML=
+"Temple Photos";
+
 }
 
-// Password Only Verification
-function loginAdmin(){
-    const pass = document.getElementById("password").value;
-    if(pass === adminPass){
-        document.getElementById("loginPopup").style.display = "none";
-        document.getElementById("adminPanel").style.display = "block";
-        
-        // Pre-fill existing data
-        document.getElementById("newTitle").value = document.getElementById("templeTitle").innerText;
-        document.getElementById("newHistory").value = document.getElementById("historyText").innerText;
-        document.getElementById("newFestival").value = document.getElementById("festivalText").innerText;
-        document.getElementById("newFb").value = document.getElementById("fbLink").href;
-        document.getElementById("newYt").value = document.getElementById("ytLink").href;
-        document.getElementById("newMap").value = document.getElementById("mapLink").href;
-        
-        alert("Admin Authorized Successfully!");
-    } else {
-        alert("Incorrect Access Password!");
-    }
-}
-
-function closeAdmin(){
-    document.getElementById("adminPanel").style.display = "none";
-    document.getElementById("password").value = "";
-}
-
-// Image File Upload Logic
-document.getElementById('fileUpload').addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (file) {
-        document.getElementById('fileNameDisplay').innerText = "Selected: " + file.name;
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            uploadedImageBase64 = event.target.result;
-        };
-        reader.readAsDataURL(file);
-    }
-});
-
-function updateTemple(){
-    if(document.getElementById("newTitle").value.trim() !== ""){
-        document.getElementById("templeTitle").innerText = document.getElementById("newTitle").value;
-    }
-    if(document.getElementById("newHistory").value.trim() !== ""){
-        document.getElementById("historyText").innerHTML = document.getElementById("newHistory").value.replace(/\n/g, "<br>");
-    }
-    if(document.getElementById("newFestival").value.trim() !== ""){
-        document.getElementById("festivalText").innerHTML = document.getElementById("newFestival").value;
-    }
-    if(document.getElementById("newFb").value.trim() !== ""){
-        document.getElementById("fbLink").href = document.getElementById("newFb").value;
-    }
-    if(document.getElementById("newYt").value.trim() !== ""){
-        document.getElementById("ytLink").href = document.getElementById("newYt").value;
-    }
-    if(document.getElementById("newMap").value.trim() !== ""){
-        document.getElementById("mapLink").href = document.getElementById("newMap").value;
-    }
-    
-    // Live update uploaded image
-    if(uploadedImageBase64 !== ""){
-        document.getElementById("mainPhoto").src = uploadedImageBase64;
-        document.getElementById("galleryPhoto1").src = uploadedImageBase64;
-    }
-    
-    alert("Changes committed successfully!");
-    closeAdmin();
-}
 </script>
+
 </body>
 </html>
